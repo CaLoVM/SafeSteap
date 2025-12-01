@@ -1,0 +1,166 @@
+/* =======================================
+   SECCION CARACTERÍSTICAS Y BENEFICIOS
+==========================================*/
+
+#caracteristicas {
+  background-color: #ffffff;
+  padding: 5rem 5% 4rem;
+}
+
+/* ----- ENCABEZADO ----- */
+
+.caract-header {
+  text-align: center;
+  max-width: 850px;
+  margin: 0 auto 3.5rem;
+}
+
+.caract-header h2 {
+  font-size: 2.3rem;
+  color: #48d1b3;
+  margin-bottom: 1rem;
+}
+
+.caract-header p {
+  color: #555;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* ----- GRID DE CARACTERÍSTICAS ----- */
+
+.caract-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 5rem;
+}
+
+.caract-card {
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.caract-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.caract-card img {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 1rem;
+}
+
+.caract-card h3 {
+  color: #48d1b3;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.caract-card p {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* ----- BENEFICIOS ----- */
+
+.benefits {
+  text-align: center;
+}
+
+.benefits h2 {
+  font-size: 2rem;
+  color: #48d1b3;
+  margin-bottom: 2rem;
+}
+
+/* Lista de beneficios */
+
+.benefit-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.benefit-item {
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  padding: 2rem 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefit-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.benefit-item img {
+  width: 65px;
+  height: 65px;
+  margin-bottom: 1rem;
+}
+
+.benefit-item h4 {
+  color: #48d1b3;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.benefit-item p {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.5;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+/* ==================================
+   RESPONSIVE DESIGN CARACTERISTICAS
+=====================================*/
+
+@media (max-width: 900px) {
+  .caract-header h2 {
+    font-size: 2rem;
+  }
+
+  .caract-card img,
+  .benefit-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .benefits h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  #caracteristicas {
+    padding: 3.5rem 1.5rem;
+  }
+
+  .caract-header p {
+    font-size: 1rem;
+  }
+
+  .caract-card {
+    padding: 1.5rem;
+  }
+
+  .benefit-item {
+    padding: 1.5rem 1rem;
+  }
+
+  .benefit-item h4 {
+    font-size: 1.1rem;
+  }
+}

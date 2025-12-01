@@ -1,0 +1,243 @@
+/* =======================
+   HEADER
+=========================*/
+
+.header {
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+}
+
+.logo h1 {
+  font-family: "Manrope", "Inter", Arial, sans-serif;
+  font-size: 1.5rem;
+  color: #48d1b3;
+  font-weight: 700;
+}
+
+/* NAVBAR */
+.navbar ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: #48d1b3;
+}
+
+.navbar .login-btn {
+  background-color: #48d1b3;
+  color: #ffffff;
+  padding: 0.45rem 0.9rem;
+  border-radius: 8px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.navbar .login-btn:hover,
+.navbar .login-btn.active {
+  color: #ffffff;
+  background-color: #48d1b3;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.dropdown-toggle::after {
+  content: "▾";
+  font-size: 0.8rem;
+  color: #48d1b3;
+}
+
+.navbar .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  list-style: none;
+  min-width: 210px;
+  padding: 0.5rem 0;
+  display: none;
+  flex-direction: column;
+  z-index: 20;
+}
+
+/*Al pasar el mouse, el menu se muestra*/
+.dropdown:hover .dropdown-menu,
+/*el menu no se oculta, porque sus hijos llevan a un enlace*/
+.dropdown:focus-within .dropdown-menu,
+/*no se oculta el submenu al estar dentro del submenu*/
+.dropdown .dropdown-menu:hover {
+  display: block;
+}
+
+/* =======================
+   MENU HAMBURGUESA (RESPONSIVE)
+=========================*/
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 32px;
+  height: 24px;
+  gap: 5px;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #48d1b3;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+/* Estado activo (cruz) */
+
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* NAVBAR EN MÓVIL */
+
+@media (max-width: 900px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 70px;
+    left: 5%;
+    right: 5%;
+    background-color: #ffffff;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 14px;
+    width: auto;
+    max-width: 360px;
+    margin: 0 auto;
+    display: none;
+    flex-direction: column;
+    text-align: left;
+    padding: 1rem 1.25rem;
+    animation: fadeIn 0.3s ease forwards;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .navbar a {
+    color: #48d1b3;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+
+  .dropdown {
+    width: 100%;
+  }
+
+  .dropdown-toggle {
+    justify-content: flex-start;
+  }
+
+  .dropdown-toggle::after {
+    content: "▸";
+  }
+
+  .dropdown.open .dropdown-toggle::after {
+    content: "▾";
+  }
+
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0.15rem 0 0.35rem;
+    margin-top: -0.15rem;
+  }
+
+  .dropdown-menu a {
+    padding-left: 0;
+    font-size: 0.95rem;
+  }
+
+  .dropdown.open .dropdown-menu {
+    display: block;
+  }
+
+  .navbar .login-btn {
+    display: block;
+    width: 100%;
+    margin-top: 0.5rem;
+    padding: 0.55rem 1rem;
+    font-size: 0.95rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(13, 118, 195, 0.15);
+  }
+
+  .navbar.show {
+    display: flex;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+

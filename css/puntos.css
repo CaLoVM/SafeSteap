@@ -1,0 +1,213 @@
+/* =====================================
+   SECCION SISTEMA DE PUNTOS Y RANKING
+========================================*/
+#puntos {
+  background-color: #ffffff;
+  padding: 5rem 5% 4rem;
+}
+
+/* ----- ENCABEZADO ----- */
+
+.points-header {
+  text-align: center;
+  max-width: 850px;
+  margin: 0 auto 3.5rem;
+}
+
+.points-header h2 {
+  font-size: 2.3rem;
+  color: #48d1b3;
+  margin-bottom: 1rem;
+}
+
+.points-header p {
+  color: #555;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* ----- VISUAL DEL RANKING ----- */
+
+.points-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  background-color: #f9f9f9;
+  padding: 2.5rem 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+  max-width: 1000px;
+  margin: 0 auto 4rem;
+}
+
+.points-visual img {
+  width: 100%;
+  max-width: 480px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.points-info {
+  flex: 1;
+  max-width: 450px;
+}
+
+.points-info h3 {
+  color: #48d1b3;
+  font-size: 1.6rem;
+  margin-bottom: 0.8rem;
+}
+
+.points-info p {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* ----- SISTEMA DE PUNTOS ----- */
+
+.points-system {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.points-system h2 {
+  font-size: 2rem;
+  color: #48d1b3;
+  margin-bottom: 2.5rem;
+}
+
+.points-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.point-card {
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  padding: 2rem 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.point-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.point-card img {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 1rem;
+}
+
+.point-card h3 {
+  color: #48d1b3;
+  font-size: 1.3rem;
+  margin-bottom: 0.6rem;
+}
+
+.point-card p {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* ----- LLAMADA A LA ACCION ----- */
+
+.points-cta {
+  text-align: center;
+  background-color: #48d1b3;
+  color: white;
+  padding: 3rem 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.points-cta h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.points-cta p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.points-cta .btn-primary {
+  background-color: white;
+  color: #48d1b3;
+  padding: 0.8rem 1.8rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.points-cta .btn-primary:hover {
+  background-color: #f1f1f1;
+}
+
+/* ==========================
+   RESPONSIVE DESIGN PUNTOS
+=============================*/
+
+@media (max-width: 900px) {
+  .points-visual {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .points-visual img {
+    max-width: 420px;
+  }
+
+  .points-info h3 {
+    font-size: 1.4rem;
+  }
+
+  .points-system h2 {
+    font-size: 1.8rem;
+  }
+
+  .points-cta h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  #puntos {
+    padding: 3.5rem 1.5rem;
+  }
+
+  .points-header h2 {
+    font-size: 1.9rem;
+  }
+
+  .points-header p {
+    font-size: 1rem;
+  }
+
+  .point-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .points-cta {
+    padding: 2.5rem 1.2rem;
+  }
+
+  .points-cta h2 {
+    font-size: 1.6rem;
+  }
+
+  .points-cta p {
+    font-size: 1rem;
+  }
+}

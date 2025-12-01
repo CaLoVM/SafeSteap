@@ -1,0 +1,154 @@
+/* =======================
+   SECCION SIMULACIONES
+=========================*/
+.simulations,
+#simulaciones {
+  background-color: #f9f9f9;
+  padding: 4rem 5%;
+}
+
+/* --- DESCRIPCIÓN --- */
+.sim-description {
+  text-align: center;
+  margin-bottom: 3rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sim-description h2 {
+  color: #48d1b3;
+  font-size: 2.3rem;
+  margin-bottom: 1rem;
+}
+
+.sim-description p {
+  color: #555;
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+}
+
+/* --- TARJETAS DE SIMULACION --- */
+
+.sim-types {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.sim-card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sim-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.sim-card img {
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  margin: 0 auto 1rem;
+}
+
+.sim-card h3 {
+  color: #48d1b3;
+  font-size: 1.3rem;
+  margin-bottom: 0.7rem;
+}
+
+.sim-card p {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* --- VIDEO DEMOSTRATIVO --- */
+
+.sim-video {
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+  padding: 2.5rem 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.sim-video h2 {
+  color: #48d1b3;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.sim-video p {
+  color: #555;
+  font-size: 1.05rem;
+  margin-bottom: 2rem;
+}
+
+/* --- CONTENEDOR DEL VIDEO --- */
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 15px;
+}
+
+/* ================================
+   RESPONSIVE DESIGN SIMULACIONES
+===================================*/
+
+@media (max-width: 768px) {
+  .sim-description h2 {
+    font-size: 2rem;
+  }
+
+  .sim-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .sim-video h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .simulations {
+    padding: 3rem 1.2rem;
+  }
+
+  .sim-card {
+    padding: 1.2rem;
+  }
+
+  .sim-card img {
+    max-width: 180px;
+  }
+
+  .video-wrapper {
+    border-radius: 10px;
+  }
+}

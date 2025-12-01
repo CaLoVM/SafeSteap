@@ -1,0 +1,228 @@
+/* =================================
+   SECCION CERTIFICADOS SAFE STEP
+====================================*/
+#certificados {
+  background-color: #f9f9f9;
+  padding: 5rem 5% 4rem;
+}
+
+/* ----- ENCABEZADO ----- */
+
+.cert-header {
+  text-align: center;
+  max-width: 850px;
+  margin: 0 auto 3.5rem;
+}
+
+.cert-header h2 {
+  font-size: 2.3rem;
+  color: #48d1b3;
+  margin-bottom: 1rem;
+}
+
+.cert-header p {
+  color: #555;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* ----- VISUAL DEL CERTIFICADO ----- */
+
+.cert-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  background-color: #ffffff;
+  padding: 2rem 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+  max-width: 1000px;
+  margin: 0 auto 4rem;
+}
+
+.cert-visual img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.qr-info {
+  text-align: center;
+  max-width: 300px;
+}
+
+.qr-info img {
+  width: 140px;
+  height: 140px;
+  margin-bottom: 1rem;
+}
+
+.qr-info p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* ----- PASOS PARA OBTENER EL CERTIFICADO ----- */
+
+.cert-steps {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.cert-steps h2 {
+  font-size: 2rem;
+  color: #48d1b3;
+  margin-bottom: 2rem;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.step-card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  padding: 2rem 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.step-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.step-number {
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #48d1b3;
+  color: white;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.step-card h3 {
+  margin-top: 1.5rem;
+  color: #48d1b3;
+  font-size: 1.3rem;
+  margin-bottom: 0.7rem;
+}
+
+.step-card p {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* ----- LLAMADA A LA ACCION ----- */
+
+.cert-cta {
+  text-align: center;
+  background-color: #48d1b3;
+  color: white;
+  padding: 3rem 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.cert-cta h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.cert-cta p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.cert-cta .btn-primary {
+  background-color: white;
+  color: #48d1b3;
+  padding: 0.8rem 1.8rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cert-cta .btn-primary:hover {
+  background-color: #f1f1f1;
+}
+
+/* ================================
+   RESPONSIVE DESIGN CERTIFICADOS
+===================================*/
+
+@media (max-width: 900px) {
+  .cert-visual {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cert-visual img {
+    max-width: 420px;
+  }
+
+  .qr-info img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .cert-cta h2 {
+    font-size: 1.8rem;
+  }
+
+  .cert-steps h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  #certificados {
+    padding: 3.5rem 1.5rem;
+  }
+
+  .cert-header h2 {
+    font-size: 1.9rem;
+  }
+
+  .cert-header p {
+    font-size: 1rem;
+  }
+
+  .step-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .cert-cta {
+    padding: 2.5rem 1.2rem;
+  }
+
+  .cert-cta h2 {
+    font-size: 1.6rem;
+  }
+
+  .cert-cta p {
+    font-size: 1rem;
+  }
+}

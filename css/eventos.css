@@ -1,0 +1,214 @@
+/* ===============================
+   SECCION EVENTOS COMUNITARIOS
+==================================*/
+
+#eventos {
+  background-color: #f9f9f9;
+  padding: 5rem 5% 4rem;
+}
+
+/* ----- ENCABEZADO ----- */
+
+.events-header {
+  text-align: center;
+  max-width: 850px;
+  margin: 0 auto 3.5rem;
+}
+
+.events-header h2 {
+  font-size: 2.3rem;
+  color: #48d1b3;
+  margin-bottom: 1rem;
+}
+
+.events-header p {
+  color: #555;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* ----- VISUAL PRINCIPAL ----- */
+
+.events-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  background-color: #ffffff;
+  padding: 2.5rem 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+  max-width: 1000px;
+  margin: 0 auto 4rem;
+}
+
+.events-visual img {
+  width: 100%;
+  max-width: 480px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.events-info {
+  flex: 1;
+  max-width: 450px;
+}
+
+.events-info h3 {
+  color: #48d1b3;
+  font-size: 1.6rem;
+  margin-bottom: 0.8rem;
+}
+
+.events-info p {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* ----- TIPOS DE EVENTOS ----- */
+
+.events-types {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.events-types h2 {
+  font-size: 2rem;
+  color: #48d1b3;
+  margin-bottom: 2.5rem;
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.event-card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  padding: 2rem 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.event-card img {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 1rem;
+}
+
+.event-card h3 {
+  color: #48d1b3;
+  font-size: 1.3rem;
+  margin-bottom: 0.6rem;
+}
+
+.event-card p {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* ----- LLAMADA A LA ACCION ----- */
+
+.events-cta {
+  text-align: center;
+  background-color: #48d1b3;
+  color: white;
+  padding: 3rem 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.events-cta h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.events-cta p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.events-cta .btn-primary {
+  background-color: white;
+  color: #48d1b3;
+  padding: 0.8rem 1.8rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.events-cta .btn-primary:hover {
+  background-color: #f1f1f1;
+}
+
+/* ===========================
+   RESPONSIVE DESIGN EVENTOS
+==============================*/
+
+@media (max-width: 900px) {
+  .events-visual {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .events-visual img {
+    max-width: 420px;
+  }
+
+  .events-info h3 {
+    font-size: 1.4rem;
+  }
+
+  .events-types h2 {
+    font-size: 1.8rem;
+  }
+
+  .events-cta h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  #eventos {
+    padding: 3.5rem 1.5rem;
+  }
+
+  .events-header h2 {
+    font-size: 1.9rem;
+  }
+
+  .events-header p {
+    font-size: 1rem;
+  }
+
+  .event-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .events-cta {
+    padding: 2.5rem 1.2rem;
+  }
+
+  .events-cta h2 {
+    font-size: 1.6rem;
+  }
+
+  .events-cta p {
+    font-size: 1rem;
+  }
+}
